@@ -13,7 +13,7 @@ public interface TransactionServiceClient {
 
     //대여
 
-    //대여 관련 물품 조회
+    //대여 관련 물품 조회(status: 0 = 빌려준, 1 = 빌린)
     @GetMapping("rent/{status}")
     public String getRentedProduct(@RequestParam String nickname, @PathVariable Long status);
 
@@ -29,25 +29,25 @@ public interface TransactionServiceClient {
     //리뷰
 
     //상품 번호로 리뷰 전체 조회
-    @GetMapping("reviews/{productNo}")
+    @GetMapping("/review/reviews/{productNo}")
     String getProductReview(@PathVariable("productNo") Long productNo);
 
-    //리뷰 좋아요
-    @PutMapping("{reviewNo}")
+//    리뷰 좋아요
+    @PutMapping("review/{reviewNo}")
     void updateHeart(@PathVariable Long reviewNo);
 
 
     //리뷰 삭제
-    @DeleteMapping("{reviewNo}")
+    @DeleteMapping("/review/{reviewNo}")
     void deleteReview(@PathVariable Long reviewNo);
 
     //리뷰 작성
-    @PostMapping("{productNo}/{rentedProductNo}")
-    String createReview(@PathVariable Long rentedProductNo, @PathVariable Long productNo, RequestReview requestReview);
+    @PostMapping("/review/{productNo}/{rentedProductNo}")
+    String createReview(@PathVariable("rentedProductNo") Long rentedProductNo, @PathVariable("productNo") Long productNo, RequestReview requestReview);
 
-    @GetMapping("{reviewNo}")
+    @GetMapping("/review/{reviewNo}")
     String getReviewDetail(@PathVariable Long reviewNo);
 
-    @GetMapping("/myreviews/{status}")
-    String getMyReview(@PathVariable String nickname, @PathVariable Long status);
+    @GetMapping("review/myreviews/{status}")
+    String getMyReview(@RequestParam String nickname, @PathVariable Long status);
 }

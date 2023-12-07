@@ -4,7 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="140a7a25-9cb0-442d-9d17-3177fc78dde1" name="Changes" comment="" />
+    <list default="true" id="140a7a25-9cb0-442d-9d17-3177fc78dde1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/EmailChkDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/MemberRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/ReportDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/memberUpdateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/nicknameDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composition-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/composition-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/MemberServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/MemberServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/TransactionServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/TransactionServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/MemberDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/CompositionServiceApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/CompositionServiceApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/AdminServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/AdminServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ChatServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ChatServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ContentServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ContentServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/MemberServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/MemberServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ProductServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ProductServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/TransactionServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/TransactionServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/CompositionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/TransactionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/AdminDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/AdminDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ChatDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ChatDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/CompositionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/CompositionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ContentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ContentDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/LoginDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/LoginDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/MemberDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ProductDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ProductDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/RequestRentedProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/RequestRentedProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/TransactionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/TransactionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/filter/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/filter/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/module/Decoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/module/Decoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/security/SecurityConfig.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,24 +76,24 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hongsikcho/oio/composition-management-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "b72f764f0a864dac660f90f89553ed5e"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hongsikcho/oio/composition-management-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;610669f0c1bd5b30f86eab294398b203&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.oio.compositionservice.dto" />
@@ -73,7 +115,8 @@
       </method>
     </configuration>
     <configuration name="CompositionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="composition-management-service" />
+      <option name="ACTIVE_PROFILES" />
+      <module name="composition-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.oio.compositionservice.CompositionServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,7 +133,9 @@
       <updated>1700985208944</updated>
       <workItem from="1700985210091" duration="5544000" />
       <workItem from="1701654438021" duration="17167000" />
-      <workItem from="1701829628316" duration="12000" />
+      <workItem from="1701829628316" duration="743000" />
+      <workItem from="1701830397973" duration="18794000" />
+      <workItem from="1701854551836" duration="16787000" />
     </task>
     <servers />
   </component>
