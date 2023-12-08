@@ -1,9 +1,8 @@
 package com.oio.compositionservice.controller;
 
 import com.oio.compositionservice.client.MemberServiceClient;
-import com.oio.compositionservice.dto.LoginDto;
+import com.oio.compositionservice.dto.member.LoginDto;
 import lombok.RequiredArgsConstructor;
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

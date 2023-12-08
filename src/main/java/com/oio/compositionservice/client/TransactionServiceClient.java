@@ -1,12 +1,9 @@
 package com.oio.compositionservice.client;
 
-import com.oio.compositionservice.dto.RequestRentedProduct;
-import com.oio.compositionservice.dto.RequestReview;
+import com.oio.compositionservice.dto.transaction.RequestRentedProduct;
+import com.oio.compositionservice.dto.transaction.RequestReview;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @FeignClient(name = "transaction-service")
 public interface TransactionServiceClient {

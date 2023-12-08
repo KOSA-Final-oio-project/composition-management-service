@@ -1,27 +1,41 @@
 package com.oio.compositionservice.client;
 
-import com.oio.compositionservice.dto.ProductDto;
+import com.oio.compositionservice.dto.product.CategoryDto;
+import com.oio.compositionservice.dto.product.Product;
+import com.oio.compositionservice.dto.product.ProductDto;
+import com.oio.compositionservice.dto.product.ProductListRequest;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @FeignClient(name = "product-service")
 public interface ProductServiceClient {
 
-    /*
-    sort : 정렬기준 ( 조회수, 대여수 )
-    order : 정렬방법( asc, desc )
-    limit : 갯수
-     */
-    @GetMapping("/product-service/product")
-    List<ProductDto> getProductOrderByRent(
-            @RequestParam("sort") String sort, @RequestParam("order") String order, @RequestParam("limit") int limit);
 
-    @GetMapping("/product-service/product")
-    List<ProductDto> getProductOrderByView(
-            @RequestParam("sort") String sort, @RequestParam("order") String order, @RequestParam("limit") int limit);
+    @PostMapping(value = "/product/writeProduct/{addressNo}/{categoryName}")
+    String createProduct(@PathVariable String categoryName, @PathVariable Long addressNo, @RequestBody ProductDto product);
 
-//    List<ProductDto> getProductOrderByDate(@RequestParam("sort") String date, @RequestParam("order") String desc, @RequestParam("limit") int limit);
+    @PutMapping("/product/modifyProduct/{productNo}")
+    String modifyProduct(@PathVariable Long productNo, @RequestBody ProductDto product);
+
+    @GetMapping(value = "/product/productDetail/{productNo}/{nickname}")
+    Map<String, Object> productDetail(@PathVariable Long productNo, @PathVariable String nickname);
+
+    @PostMapping("/product/productList")
+    Map productList(@RequestBody ProductListRequest request);
+
+    @GetMapping("/product/myProduct/{postCategory}")
+    List<Product> myProduct(String nickname, @PathVariable Integer postCategory);
+
+    @DeleteMapping("/product/delete/{productNo}")
+    void deleteProductById(@PathVariable Long productNo);
+
+    @GetMapping("/category/categoryList")
+    List<String> listOfCategory();
+
+    @PostMapping("/category/addCategory")
+    void insertCategory(CategoryDto category);
 }

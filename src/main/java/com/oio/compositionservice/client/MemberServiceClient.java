@@ -1,11 +1,12 @@
 package com.oio.compositionservice.client;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.oio.compositionservice.dto.*;
+import com.oio.compositionservice.dto.member.EmailChkDto;
+import com.oio.compositionservice.dto.member.LoginDto;
+import com.oio.compositionservice.dto.member.memberUpdateDto;
+import com.oio.compositionservice.dto.member.nicknameDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;

@@ -4,10 +4,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.oio.compositionservice.client.MemberServiceClient;
-import com.oio.compositionservice.dto.*;
+import com.oio.compositionservice.dto.member.*;
 import com.oio.compositionservice.module.Decoder;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.connector.Response;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.*;
@@ -18,11 +17,8 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.net.http.HttpResponse;
 import java.nio.file.Files;
-import java.security.Principal;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -85,7 +81,7 @@ public class MemberController {
 
     //로그인 test
     @PostMapping("/login")
-    public String login(@RequestBody LoginDto loginDto,HttpServletResponse response){
+    public String login(@RequestBody LoginDto loginDto, HttpServletResponse response){
         String result = memberServiceClient.login(loginDto);
         response.addHeader("token",result);
         return "success";

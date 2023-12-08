@@ -1,8 +1,8 @@
 package com.oio.compositionservice.controller;
 
 import com.oio.compositionservice.client.TransactionServiceClient;
-import com.oio.compositionservice.dto.RequestRentedProduct;
-import com.oio.compositionservice.dto.RequestReview;
+import com.oio.compositionservice.dto.transaction.RequestRentedProduct;
+import com.oio.compositionservice.dto.transaction.RequestReview;
 import com.oio.compositionservice.module.Decoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -67,7 +67,6 @@ public class TransactionController {
     @GetMapping("/myreviews/{status}")
     public String getMyReview(HttpServletRequest request,@PathVariable Long status) {
         String nickname = decoder.decode(request);
-        System.out.println(nickname);
         String result = transactionServiceClient.getMyReview(nickname,status);
         return result;
     }
