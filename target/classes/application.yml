@@ -40,3 +40,4 @@ eureka:
 
 jwt:
   secret: user_token
+  expire-length: 8640000

@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 public class Decoder {
 
     public String decode(HttpServletRequest request){
-        String token = request.getHeader("token");
+        String token = request.getHeader("access-token");
         Jws<Claims> claimsJws = Jwts.parser()
-                .setSigningKey("user_token")
+                .setSigningKey("example_token")
                 .parseClaimsJws(token);
 
         Claims claims = claimsJws.getBody();
@@ -21,4 +21,5 @@ public class Decoder {
 
         return nickname;
     }
+
 }

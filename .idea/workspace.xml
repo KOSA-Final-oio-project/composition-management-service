@@ -5,67 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="140a7a25-9cb0-442d-9d17-3177fc78dde1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_7_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_3_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/chat/ChatRoomDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/product/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/product/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/product/CategoryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/product/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/product/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/product/ProductListRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_15_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_5_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_3_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_7_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/ContentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/PageRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/PageResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/PostDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/ReplyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/RequestPostModify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/RequestPostRemove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/RequestReplyModify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/ResponsePostModify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/ResponseReplyModify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/UploadFileDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content/UploadResultDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_17.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_11.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composition-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/composition-service.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/ChatServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/ChatServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/ContentServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/ContentServiceClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/MemberServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/MemberServiceClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/ProductServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/ProductServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/TransactionServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/client/TransactionServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/AdminDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/transaction/AdminDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/ChatDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/chat/ChatDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/CompositionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/transaction/CompositionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/ContentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/transaction/ContentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/EmailChkDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/EmailChkDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/LoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/MemberRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/MemberRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/transaction/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/ReportDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/ReportDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/RequestRentedProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/transaction/RequestRentedProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/RequestReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/transaction/RequestReview.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/TransactionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/transaction/TransactionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/memberUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/memberUpdateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/nicknameDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/nicknameDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ChatServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ChatServiceClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/member/LoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/module/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/module/Decoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ContentServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ContentServiceClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/MemberServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/MemberServiceClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ProductServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/ProductServiceClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/TransactionServiceClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/client/TransactionServiceClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/ChatController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/MemberController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/MemberController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/MemberController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/MemberController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/TransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/TransactionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/AdminDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ChatDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/CompositionDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ContentDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/EmailChkDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/LoginDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/MemberRequestDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ProductDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/ReportDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/RequestRentedProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/RequestReview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/TransactionDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/memberUpdateDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/dto/nicknameDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/filter/JwtAuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/module/Decoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/module/Decoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/oio/compositionservice/security/SecurityConfig.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +113,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hongsikcho/oio/composition-management-service/src/main/java/com/oio/compositionservice/dto/product",
+    "last_opened_file_path": "/Users/hongsikcho/oio/composition-management-service/src/main/java/com/oio/compositionservice/dto/content",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -119,14 +126,16 @@
       <recent name="com.oio.compositionservice.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/content" />
       <recent name="$PROJECT_DIR$/src/main/java/com/oio/compositionservice/dto/product" />
       <recent name="$PROJECT_DIR$/src/main/java/com/oio/compositionservice" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.oio.compositionservice.dto.member" />
+      <recent name="com.oio.compositionservice.dto.content" />
       <recent name="com.oio.compositionservice.dto.product" />
       <recent name="com.oio.compositionservice.dto.chat" />
       <recent name="com.oio.compositionservice.dto" />
-      <recent name="com.oio.compositionservice.service" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CompositionServiceApplication">
@@ -158,7 +167,10 @@
       <workItem from="1701654438021" duration="17167000" />
       <workItem from="1701829628316" duration="743000" />
       <workItem from="1701830397973" duration="18794000" />
-      <workItem from="1701854551836" duration="30842000" />
+      <workItem from="1701854551836" duration="31265000" />
+      <workItem from="1702014298509" duration="14000" />
+      <workItem from="1702014335109" duration="12472000" />
+      <workItem from="1702044822114" duration="25615000" />
     </task>
     <servers />
   </component>

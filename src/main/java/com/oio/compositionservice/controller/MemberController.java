@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -81,10 +82,18 @@ public class MemberController {
 
     //로그인 test
     @PostMapping("/login")
-    public String login(@RequestBody LoginDto loginDto, HttpServletResponse response){
-        String result = memberServiceClient.login(loginDto);
-        response.addHeader("token",result);
-        return "success";
+    public Map<String,String> login(@RequestBody LoginDto loginDto, HttpServletResponse response){
+        Map<String,String> responseMap = new HashMap<>();
+        Token result= memberServiceClient.login(loginDto);
+        if(result.getAccessToken().equals("fail") && result.getRefreshToken().equals("fail")){
+            responseMap.put("result","fail");
+            return responseMap;
+        }
+
+        response.addHeader("accessToken", result.getAccessToken());
+        response.addHeader("refreshToken", result.getRefreshToken());
+        responseMap.put("result","success");
+        return responseMap;
     }
 
     //회원 수정 test
@@ -180,5 +189,11 @@ public class MemberController {
         return result;
     }
 
+    @PostMapping("/refresh")
+    public Map<String,Object> validate(@RequestBody LoginDto dto) {
+        System.out.println(dto.getNickname());
+        Map<String,Object> result = memberServiceClient.refresh(dto);
+        return result;
+    }
 
 }

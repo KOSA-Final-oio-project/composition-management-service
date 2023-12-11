@@ -8,6 +8,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.Path;
 import java.util.List;
 import java.util.Map;
 
@@ -38,4 +39,13 @@ public interface ProductServiceClient {
 
     @PostMapping("/category/addCategory")
     void insertCategory(CategoryDto category);
+
+    @GetMapping("/address/siDoList")
+    List<String> siDoList();
+
+    @GetMapping("/address/siGunGuList/{siDo}")
+    List<String> siGunGuList(@PathVariable String siDo);
+
+    @GetMapping("/address/eupMyeonRoList/{siDo}/{siGunGu}")
+    List<String> eupMyeonRoList(@PathVariable String siDo, @PathVariable String siGunGu);
 }

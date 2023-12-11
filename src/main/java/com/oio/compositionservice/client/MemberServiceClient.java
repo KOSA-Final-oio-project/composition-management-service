@@ -1,10 +1,8 @@
 package com.oio.compositionservice.client;
 
-import com.oio.compositionservice.dto.member.EmailChkDto;
-import com.oio.compositionservice.dto.member.LoginDto;
-import com.oio.compositionservice.dto.member.memberUpdateDto;
-import com.oio.compositionservice.dto.member.nicknameDto;
+import com.oio.compositionservice.dto.member.*;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +19,7 @@ public interface MemberServiceClient {
     String getMember();
 
     @PostMapping("member-service/login")
-    String login(@RequestBody LoginDto dto);
+    Token login(@RequestBody LoginDto dto);
 
     @PostMapping(value = "member-service/signup",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     ResponseEntity<String> signUp(@RequestPart MultipartFile file,
@@ -50,4 +48,7 @@ public interface MemberServiceClient {
 
     @GetMapping("/member-service/report")
     ResponseEntity<String> report(@RequestPart List<CommonsMultipartFile> list, @RequestParam Map<String, Object> map);
+
+    @PostMapping("/member-service/refresh")
+    Map<String, Object> refresh(@SpringQueryMap LoginDto dto);
 }

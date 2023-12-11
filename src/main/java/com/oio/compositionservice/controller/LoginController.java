@@ -2,6 +2,7 @@ package com.oio.compositionservice.controller;
 
 import com.oio.compositionservice.client.MemberServiceClient;
 import com.oio.compositionservice.dto.member.LoginDto;
+import com.oio.compositionservice.dto.member.Token;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -17,11 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
     private final MemberServiceClient memberServiceClient;
 
-    @PostMapping("/member-service/login")
-    public ResponseEntity<String> login(@RequestBody LoginDto dto){
-        String token = memberServiceClient.login(dto);
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("token", token);
-        return new ResponseEntity<>("success", headers, HttpStatus.OK);
-    }
+//    @PostMapping("/member-service/login")
+//    public ResponseEntity<String> login(@RequestBody LoginDto dto){
+//        Token token = memberServiceClient.login(dto);
+//        HttpHeaders headers = new HttpHeaders();
+//        headers.set("accessToken", token.getAccessToken());
+//        headers.set("refreshToken", token.getRefreshToken());
+//        return ResponseEntity.ok();
+//    }
 }

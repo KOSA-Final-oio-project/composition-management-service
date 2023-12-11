@@ -84,4 +84,20 @@ public class ProductController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    //주소
+    @GetMapping("/siDoList")
+    public List<String> siDOList() {
+        return productServiceClient.siDoList();
+    }
+
+    @GetMapping(value = "/siGunGuList/{siDo}")
+    public List<String> siGunGuList(@PathVariable String siDo){
+        return productServiceClient.siGunGuList(siDo);
+    }
+
+    @GetMapping(value = "/eupMyeonRoList/{siDo}/{siGunGu}")
+    public List<String> eupMyeonRoList(@PathVariable String siDo, @PathVariable String siGunGu){
+        return  productServiceClient.eupMyeonRoList(siDo, siGunGu);
+    }
+
 }
