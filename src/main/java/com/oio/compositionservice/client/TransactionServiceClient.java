@@ -3,6 +3,7 @@ package com.oio.compositionservice.client;
 import com.oio.compositionservice.dto.transaction.RequestRentedProduct;
 import com.oio.compositionservice.dto.transaction.RequestReview;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.web.bind.annotation.*;
 
 @FeignClient(name = "transaction-service")
@@ -40,7 +41,7 @@ public interface TransactionServiceClient {
 
     //리뷰 작성
     @PostMapping("/review/{productNo}/{rentedProductNo}")
-    String createReview(@PathVariable("rentedProductNo") Long rentedProductNo, @PathVariable("productNo") Long productNo, RequestReview requestReview);
+    String createReview(@PathVariable("rentedProductNo") Long rentedProductNo, @PathVariable("productNo") Long productNo,@RequestBody RequestReview requestReview);
 
     @GetMapping("/review/{reviewNo}")
     String getReviewDetail(@PathVariable Long reviewNo);

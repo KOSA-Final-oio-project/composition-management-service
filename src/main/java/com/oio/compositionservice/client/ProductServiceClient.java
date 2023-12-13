@@ -5,6 +5,7 @@ import com.oio.compositionservice.dto.product.Product;
 import com.oio.compositionservice.dto.product.ProductDto;
 import com.oio.compositionservice.dto.product.ProductListRequest;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,8 +26,8 @@ public interface ProductServiceClient {
     @GetMapping(value = "/product/productDetail/{productNo}/{nickname}")
     Map<String, Object> productDetail(@PathVariable Long productNo, @PathVariable String nickname);
 
-    @PostMapping("/product/productList")
-    Map productList(@RequestBody ProductListRequest request);
+    @GetMapping("/product/productList/{type}")
+    Map productList(@PathVariable String type,@RequestBody ProductListRequest request);
 
     @GetMapping("/product/myProduct/{postCategory}")
     List<Product> myProduct(String nickname, @PathVariable Integer postCategory);

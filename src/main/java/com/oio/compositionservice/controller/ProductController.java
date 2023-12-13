@@ -1,6 +1,7 @@
 package com.oio.compositionservice.controller;
 
 import com.oio.compositionservice.client.ProductServiceClient;
+import com.oio.compositionservice.client.TransactionServiceClient;
 import com.oio.compositionservice.dto.product.CategoryDto;
 import com.oio.compositionservice.dto.product.Product;
 import com.oio.compositionservice.dto.product.ProductDto;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +21,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 @RequestMapping("/oio")
 public class ProductController {
+
+    private final TransactionServiceClient transactionServiceClient;
 
     private final ProductServiceClient productServiceClient;
 
@@ -29,6 +33,8 @@ public class ProductController {
     public String writeProduct(@PathVariable String categoryName,
                                           @PathVariable Long addressNo,
                                           @RequestBody ProductDto product) {
+        System.out.println(categoryName);
+        System.out.println(addressNo);
         String result = productServiceClient.createProduct(categoryName, addressNo, product);
         return result;
     }
@@ -43,16 +49,20 @@ public class ProductController {
 
     //상품 상세정보 test
     @GetMapping(value = "/product-detail/{productNo}")
-    public Map<String, Object> productDetail(@PathVariable Long productNo, HttpServletRequest request) {
-        String nickname = decoder.decode(request);
-        return productServiceClient.productDetail(productNo, nickname);
+    public Map<String, Object> productDetail(@PathVariable Long productNo) {
+        Map map = new HashMap();
+        String productReview = transactionServiceClient.getProductReview(productNo);
+        Map<String, Object> stringObjectMap = productServiceClient.productDetail(productNo, "닉네임이다");
+        map.put("product",stringObjectMap);
+        map.put("review",productReview);
+        return map;
     }
 
     //상품 리스트 출력 test
-    @PostMapping("/productList")
-    public Map productList(@RequestBody ProductListRequest request) {
-        return productServiceClient.productList(request);
-    }
+//    @PostMapping("/productList")
+//    public Map productList(@RequestBody ProductListRequest request) {
+//        return productServiceClient.productList(request);
+//    }
 
     //내가 등록한 상품 test
     @GetMapping(value = "/product/{postCategory}")

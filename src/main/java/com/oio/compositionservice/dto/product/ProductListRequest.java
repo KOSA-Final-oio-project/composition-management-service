@@ -7,7 +7,6 @@ import lombok.Setter;
 
 @Setter @Getter @NoArgsConstructor @AllArgsConstructor
 public class ProductListRequest {
-    private String types; //"n":일반,"v":조회수top3,"r":대여수top3
     private String searchWord;
     private String siDo;
     private String siGunGu;

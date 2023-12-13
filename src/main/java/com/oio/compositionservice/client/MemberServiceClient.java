@@ -28,8 +28,9 @@ public interface MemberServiceClient {
     @GetMapping("/member-service/member/{memberNickname}")
     String showMember(@PathVariable String memberNickname);
 
-    @PutMapping("/member-service/{memberNickname}")
-    String updateMember(@PathVariable String memberNickname, @RequestBody memberUpdateDto dto);
+    @PutMapping(value = "/member-service/{memberNickname}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    Map updateMember(@PathVariable String memberNickname,@RequestPart("file") MultipartFile file,
+                        @RequestParam Map<String, Object> map);
 
     @DeleteMapping("/member-service/member/{memberNickname}")
     String deleteMemberByNickname(@PathVariable String memberNickname);

@@ -42,9 +42,12 @@ public class TransactionController {
     //리뷰
 
     //리뷰 작성 test
-    @PostMapping("/{productNo}/{rentedProductNo}")
+    @PostMapping("/review/{productNo}/{rentedProductNo}")
     public String createReview(@PathVariable("rentedProductNo") Long rentedProductNo,
                                                        @PathVariable("productNo") Long productNo, @RequestBody RequestReview requestReview) {
+        System.out.println(requestReview.getWriterNickname());
+        System.out.println(rentedProductNo);
+        System.out.println(requestReview);
         String result = transactionServiceClient.createReview(rentedProductNo,productNo,requestReview);
         return result;
     }

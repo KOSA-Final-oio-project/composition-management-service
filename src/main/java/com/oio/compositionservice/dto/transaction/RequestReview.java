@@ -19,4 +19,6 @@ public class RequestReview {
     private LocalDateTime postDate;
 
     private String content;
+
+    private Long heart;
 }
