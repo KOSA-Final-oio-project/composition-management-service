@@ -26,7 +26,7 @@ public interface MemberServiceClient {
                                   @RequestParam Map<String, Object> map);
 
     @GetMapping("/member-service/member/{memberNickname}")
-    String showMember(@PathVariable String memberNickname);
+    Map<String,Object> showMember(@PathVariable String memberNickname);
 
     @PutMapping(value = "/member-service/{memberNickname}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     Map updateMember(@PathVariable String memberNickname,@RequestPart("file") MultipartFile file,
@@ -47,8 +47,8 @@ public interface MemberServiceClient {
     @PostMapping("/member-service/member/{memberEmail}")
     Map<String,String> findPassword(@PathVariable String memberEmail, EmailChkDto dto);
 
-    @GetMapping("/member-service/report")
-    ResponseEntity<String> report(@RequestPart List<CommonsMultipartFile> list, @RequestParam Map<String, Object> map);
+    @PostMapping(value = "/member-service/member/report",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    ResponseEntity<String> report(@RequestPart List<MultipartFile> photos, @RequestParam Map<String, Object> dto);
 
     @PostMapping("/member-service/refresh")
     Map<String, Object> refresh(@SpringQueryMap LoginDto dto);

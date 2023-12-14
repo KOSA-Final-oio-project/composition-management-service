@@ -33,8 +33,6 @@ public class ProductController {
     public String writeProduct(@PathVariable String categoryName,
                                           @PathVariable Long addressNo,
                                           @RequestBody ProductDto product) {
-        System.out.println(categoryName);
-        System.out.println(addressNo);
         String result = productServiceClient.createProduct(categoryName, addressNo, product);
         return result;
     }
