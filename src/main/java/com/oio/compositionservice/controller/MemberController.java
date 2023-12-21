@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.oio.compositionservice.client.MemberServiceClient;
+import com.oio.compositionservice.dto.PhoneDto;
 import com.oio.compositionservice.dto.member.*;
 import com.oio.compositionservice.module.Decoder;
 import lombok.RequiredArgsConstructor;
@@ -42,9 +43,9 @@ public class MemberController {
 
     //회원 수정 test
     @PutMapping("/member/{memberNickname}")
-    public String updateMember(@PathVariable String memberNickname,@RequestPart("memberRequestDto") memberUpdateDto memberRequestDto,
+    public String updateMember(@PathVariable String memberNickname,memberUpdateDto memberRequestDto,
                                MultipartFile file){
-        File temp = new File("/Users/hongsikcho/oio",file.getOriginalFilename());
+        File temp = new File("C:/oioback",file.getOriginalFilename());
 
         try {
             file.transferTo(temp);//임시파일 생성
@@ -101,6 +102,26 @@ public class MemberController {
         return result;
     }
 
+    //휴대폰 번호 중복체크 test
+    @PostMapping("/phone-chk")
+    public String phoneDupChk(@RequestBody PhoneDto phoneDto){
+        String result = memberServiceClient.phoneDupChk(phoneDto);
+
+        return result;
+    }
+
+    @PostMapping("/send-phone")
+    public Map<String,String> sendPhone(@RequestBody PhoneDto phoneDto){
+        Map<String,String> result = memberServiceClient.sendPhone(phoneDto);
+        return result;
+    }
+
+    //아이디 찾기
+    @PostMapping("/find-email")
+    public Map<String,String> findId(@RequestBody PhoneDto phoneDto){
+        Map<String,String> result = memberServiceClient.findId(phoneDto);
+        return result;
+    }
     //이메일 전송 test
     @PostMapping("/send-email")
     public Map<String,String> sendEmail(@RequestBody EmailChkDto emailRequest) {
@@ -116,16 +137,15 @@ public class MemberController {
     }
 
     @PostMapping("member/{memberNickname}/report")
-    public ResponseEntity<String> reportMember(@PathVariable String memberNickname, @RequestPart("reportDto") ReportDto dto,
-                                               @RequestPart("photos") List<MultipartFile> photos, HttpServletRequest request){
+    public ResponseEntity<String> reportMember(@PathVariable String memberNickname,  ReportDto dto,
+                                                List<MultipartFile> photos, HttpServletRequest request){
 
-        String nickname = decoder.decode(request);
         dto.setReportedNickname(memberNickname);
-        dto.setReporterNickname(nickname);
+        dto.setReporterNickname(dto.getReporterNickname());
         MultipartFile mFile = null;
         List<MultipartFile> list = new ArrayList();
         for(MultipartFile file : photos) {
-            File temp = new File("/Users/hongsikcho/oio", file.getOriginalFilename());
+            File temp = new File("C:/oioback", file.getOriginalFilename());
 
             try {
                 file.transferTo(temp);//임시파일 생성

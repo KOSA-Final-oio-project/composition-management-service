@@ -7,7 +7,6 @@ import lombok.Setter;
 @Setter
 public class memberUpdateDto {
 
-    private String name;
     private String email;
     private String nickname;
     private String password;

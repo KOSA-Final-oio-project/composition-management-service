@@ -86,4 +86,10 @@ public class TransactionController {
         transactionServiceClient.deleteReview(reviewNo);
     }
 
+    @GetMapping("/heart")
+    public String getAllHeart(HttpServletRequest request) {
+        String nickname = decoder.decode(request);
+        String result = transactionServiceClient.getAllHeart(nickname);
+        return result;
+    }
 }

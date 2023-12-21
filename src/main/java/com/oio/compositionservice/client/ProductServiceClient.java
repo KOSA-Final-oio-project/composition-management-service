@@ -6,8 +6,10 @@ import com.oio.compositionservice.dto.product.ProductDto;
 import com.oio.compositionservice.dto.product.ProductListRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.SpringQueryMap;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.ws.rs.Path;
 import java.util.List;
@@ -17,8 +19,12 @@ import java.util.Map;
 public interface ProductServiceClient {
 
 
-    @PostMapping(value = "/product/writeProduct/{addressNo}/{categoryName}")
-    String createProduct(@PathVariable String categoryName, @PathVariable Long addressNo, @RequestBody ProductDto product);
+    @PostMapping(value = "/product/writeProduct/{addressNo}/{categoryName}/{nickname}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    ResponseEntity<String> createProduct(@PathVariable String categoryName,
+                                         @PathVariable Long addressNo,
+                                         @PathVariable String nickname,
+                                         @RequestParam Map<String, Object> product,
+                                         @RequestPart List<MultipartFile> files);
 
     @PutMapping("/product/modifyProduct/{productNo}")
     String modifyProduct(@PathVariable Long productNo, @RequestBody ProductDto product);
@@ -27,10 +33,10 @@ public interface ProductServiceClient {
     Map<String, Object> productDetail(@PathVariable Long productNo, @PathVariable String nickname);
 
     @GetMapping("/product/productList/{type}")
-    Map productList(@PathVariable String type,@RequestBody ProductListRequest request);
+    Map productList(@PathVariable String type,@ModelAttribute ProductListRequest productListRequest);
 
-    @GetMapping("/product/myProduct/{postCategory}")
-    List<Product> myProduct(String nickname, @PathVariable Integer postCategory);
+    @GetMapping("/product/myProduct/{nickname}/{postCategory}")
+    List<Product> myProduct(@PathVariable Integer postCategory, @PathVariable String nickname);
 
     @DeleteMapping("/product/delete/{productNo}")
     void deleteProductById(@PathVariable Long productNo);

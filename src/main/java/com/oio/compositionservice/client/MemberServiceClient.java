@@ -1,5 +1,6 @@
 package com.oio.compositionservice.client;
 
+import com.oio.compositionservice.dto.PhoneDto;
 import com.oio.compositionservice.dto.member.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.SpringQueryMap;
@@ -15,41 +16,50 @@ import java.util.Map;
 @FeignClient(name="member-service")
 public interface MemberServiceClient {
 
-    @GetMapping("/member-service/member")
-    String getMember();
+//    @GetMapping("/member/member")
+//    String getMember();
 
-    @PostMapping("member-service/login")
+    @PostMapping("member/login")
     Token login(@RequestBody LoginDto dto);
 
-    @PostMapping(value = "member-service/signup",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "member/signup",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     ResponseEntity<String> signUp(@RequestPart MultipartFile file,
                                   @RequestParam Map<String, Object> map);
 
-    @GetMapping("/member-service/member/{memberNickname}")
+    @GetMapping("/member/{memberNickname}")
     Map<String,Object> showMember(@PathVariable String memberNickname);
 
-    @PutMapping(value = "/member-service/{memberNickname}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PutMapping(value = "/member/{memberNickname}",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     Map updateMember(@PathVariable String memberNickname,@RequestPart("file") MultipartFile file,
                         @RequestParam Map<String, Object> map);
 
-    @DeleteMapping("/member-service/member/{memberNickname}")
+    @DeleteMapping("/member/{memberNickname}")
     String deleteMemberByNickname(@PathVariable String memberNickname);
 
-    @PostMapping("/member-service/email-chk")
+    @PostMapping("/member/email-chk")
     String idDupChk(EmailChkDto emailChkDto);
 
-    @PostMapping("/member-service/nickname-chk")
+    @PostMapping("/member/nickname-chk")
     String emailDupChk(nicknameDto nicknameDto);
 
-    @PostMapping("/member-service/send-email")
+    @PostMapping("/member/send-email")
     Map<String,String> sendEmail(EmailChkDto emailRequest);
 
-    @PostMapping("/member-service/member/{memberEmail}")
+    @PostMapping("/member/send-sms")
+    Map<String, String> sendPhone(PhoneDto phoneDto);
+
+    @PostMapping("/member/{memberEmail}")
     Map<String,String> findPassword(@PathVariable String memberEmail, EmailChkDto dto);
 
-    @PostMapping(value = "/member-service/member/report",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/member/report",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     ResponseEntity<String> report(@RequestPart List<MultipartFile> photos, @RequestParam Map<String, Object> dto);
 
-    @PostMapping("/member-service/refresh")
+    @PostMapping("/member/refresh")
     Map<String, Object> refresh(@SpringQueryMap LoginDto dto);
+
+    @PostMapping("/member/phone-chk")
+    String phoneDupChk(PhoneDto phoneNumber);
+
+    @PostMapping("/member/find-email")
+    Map<String, String> findId(PhoneDto phoneDto);
 }

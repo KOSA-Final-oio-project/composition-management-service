@@ -15,7 +15,7 @@ import java.util.Map;
 @FeignClient(name = "content-service")
 public interface ContentServiceClient {
     @PostMapping("/post/register/{nickname}")
-    Map<String,Long> create(@PathVariable String nickname, @ModelAttribute PostDto postDto);
+    Map<String,Long> create(@PathVariable String nickname, @SpringQueryMap PostDto postDto);
 
     @GetMapping("/posts/{category}")
     PageResponseDto getPosts(@PathVariable String category, @SpringQueryMap PageRequestDto pageRequestDto);

@@ -19,19 +19,14 @@ public class PostDto {
 
     private String nickName;
 
-    @NotEmpty
     private String title;
 
-    @NotEmpty
     private String content;
 
-    @NotEmpty
     private String category;
 
-    @NotNull
     private int status;
 
-    @NotNull
     private int key;
 
     private Long password;

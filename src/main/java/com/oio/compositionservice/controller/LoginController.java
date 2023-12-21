@@ -35,10 +35,10 @@ public class LoginController {
     private final Decoder decoder;
 
     @PostMapping("/signup")
-    public ResponseEntity<String> signUp(@RequestPart("memberRequestDto") MemberRequestDto memberRequestDto,
-                                         MultipartFile file) {
-
-        File temp = new File("/Users/hongsikcho/oio",file.getOriginalFilename());
+    public ResponseEntity<String> signUp( MemberRequestDto memberRequestDto,
+                                         MultipartFile file,
+                                          HttpServletRequest request) {
+        File temp = new File("C:/oioback",file.getOriginalFilename());
 
         try {
             file.transferTo(temp);//임시파일 생성
@@ -81,8 +81,14 @@ public class LoginController {
             return responseMap;
         }
 
+        if(result.getAccessToken().equals("withdrawal")){
+            responseMap.put("result","withdrawal");
+            return responseMap;
+        }
+
         response.addHeader("accessToken", result.getAccessToken());
         response.addHeader("refreshToken", result.getRefreshToken());
+        response.addHeader("Access-Control-Expose-Headers", "accessToken");
         responseMap.put("result","success");
         return responseMap;
     }

@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(name = "transaction-service")
+@FeignClient(name = "http://transaction-service")
 public interface TransactionServiceClient {
 
     //대여
@@ -48,4 +48,7 @@ public interface TransactionServiceClient {
 
     @GetMapping("review/myreviews/{status}")
     String getMyReview(@RequestParam String nickname, @PathVariable Long status);
+
+    @GetMapping("review/heart")
+    String getAllHeart(@RequestParam String nickname);
 }

@@ -26,7 +26,9 @@ public class ContentController {
 
     private final ContentServiceClient contentServiceClient;
     private final Decoder decoder;
-    
+
+
+    //test
     @PostMapping(value = "/post/register")
     public Map<String, Long> register(HttpServletRequest request,@RequestBody PostDto postDto) {
         String nickname = decoder.decode(request);
@@ -35,11 +37,11 @@ public class ContentController {
     }
 
     @GetMapping("/posts/{category}")
-    public ResponseEntity<PageResponseDto> getPosts(@PathVariable("category") String category, @SpringQueryMap PageRequestDto pageRequestDto) {
+    public ResponseEntity<PageResponseDto> getPosts(@PathVariable("category") String category, @RequestBody PageRequestDto pageRequestDto) {
         PageResponseDto result = contentServiceClient.getPosts(category,pageRequestDto);
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
-
+    //test
     @GetMapping("/posts/member")
     public ResponseEntity<List<PostDto>> getPostsByNickname(HttpServletRequest request) {
         String nickname = decoder.decode(request);
@@ -47,6 +49,7 @@ public class ContentController {
         return result;
     }
 
+    //test
     @GetMapping("/post/{pno}")
     public ResponseEntity<Map<String, Object>> getPost(HttpServletRequest request,@PathVariable("pno") Long pno) {
         String nickname = decoder.decode(request);
@@ -54,6 +57,7 @@ public class ContentController {
         return result;
     }
 
+    //test
     @PutMapping(value = "/post/{pno}")
     public ResponseEntity<ResponsePostModify> modify(@PathVariable("pno") Long pno,
                                                      @RequestBody RequestPostModify requestPostModify){
@@ -61,6 +65,7 @@ public class ContentController {
         return result;
     }
 
+    //test
     @DeleteMapping ("/post/{pno}")
     public Map<String, Long> remove(@PathVariable("pno") Long pno,@RequestBody RequestPostRemove requestPostRemove) {
         Map<String,Long> result = contentServiceClient.remove(pno,requestPostRemove);
@@ -69,6 +74,8 @@ public class ContentController {
 
 
     //답글
+
+    //test
     @PostMapping(value = "/reply/register")
     public ResponseEntity<Map<String, String>> register(HttpServletRequest request, @RequestBody ReplyDto replyDto){
         String nickname = decoder.decode(request);
@@ -76,6 +83,8 @@ public class ContentController {
         return result;
     }
 
+
+    //test
     @PutMapping(value = "/reply/{rno}")
     public ResponseEntity<ResponseReplyModify> modify(@PathVariable("rno") Long rno, @RequestBody RequestReplyModify RequestReplyModify){
 
@@ -83,6 +92,7 @@ public class ContentController {
         return result;
     }
 
+    //test
     @DeleteMapping("/reply/{rno}/{pno}")
     public ResponseEntity<Map<String, String>> remove(@PathVariable("rno") Long rno, @PathVariable("pno") Long pno) {
 
@@ -90,6 +100,7 @@ public class ContentController {
         return result;
         }
 
+        //test
     @GetMapping("/replies/{pno}")
     public ResponseEntity<Map<String, Object>> getReplies(HttpServletRequest request,@PathVariable("pno") Long pno) {
         String nickname = decoder.decode(request);

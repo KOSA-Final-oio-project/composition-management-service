@@ -1,5 +1,6 @@
 package com.oio.compositionservice.dto.product;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import java.util.Date;
 
@@ -16,7 +17,7 @@ public class ProductDto {
     private String priceCategory;
 
     private Integer price;
-
+    @JsonFormat(pattern = "yyyy-MM-dd", locale = "Asia/Seoul")
     private Date startDate;
 
     private Date endDate;

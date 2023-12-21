@@ -7,6 +7,7 @@
           <option value="token" />
           <option value="accessToken" />
           <option value="refreshToken" />
+          <option value="Access-Control-Expose-Headers" />
         </set>
       </option>
     </inspection_tool>
